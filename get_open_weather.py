@@ -8,12 +8,15 @@ import sys
 import json
 import requests
 from geopy.geocoders import Nominatim
-APPID = '0361511a40fcdb5b8e18a5ef9974866a'
+import os
+
+API_ID = os.getenv("OPEN_WEATHER_APPID")
 
 
-logging.basicConfig(level=logging.CRITICAL,
+logging.basicConfig(level=logging.DEBUG,
                     format='%(asctime)s - %(levelname)s - %(message)s')
 
+logging.debug(f"Open Weather Map API ID: {API_ID}")
 
 def get_coordinates(city):
     """Gets coordinates to a city."""
@@ -41,7 +44,7 @@ lon = location.longitude
 city_address = location.address
 
 units = 'imperial'
-url = f'https://api.openweathermap.org/data/3.0/onecall?lat={lat}&lon={lon}&units={units}&appid={APPID}'
+url = f'https://api.openweathermap.org/data/3.0/onecall?lat={lat}&lon={lon}&units={units}&appid={API_ID}'
 
 response = requests.get(url)
 response.raise_for_status()
