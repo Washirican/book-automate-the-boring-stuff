@@ -13,7 +13,7 @@ import os
 API_ID = os.getenv("OPEN_WEATHER_APPID")
 
 
-logging.basicConfig(level=logging.DEBUG,
+logging.basicConfig(level=logging.CRITICAL,
                     format='%(asctime)s - %(levelname)s - %(message)s')
 
 logging.debug(f"Open Weather Map API ID: {API_ID}")
