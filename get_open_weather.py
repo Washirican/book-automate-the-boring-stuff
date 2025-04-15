@@ -31,7 +31,7 @@ def get_coordinates(city):
 
 # Compute location from command line arguments.
 if len(sys.argv) < 2:
-    print('Usage: get_open_weather.py city_name, state')
+    print('Usage: get_open_weather.py city_name')
     sys.exit()
 
 city = ' '.join(sys.argv[1:])
