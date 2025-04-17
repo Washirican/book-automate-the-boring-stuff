@@ -28,13 +28,15 @@ def get_coordinates(city):
         print("Coordinates not found for the given city.")
         return None
 
-# TODO (2025-04-17): Make this prompt user for city
-# Compute location from command line arguments.
-if len(sys.argv) < 2:
-    print('Usage: get_open_weather.py city_name')
-    sys.exit()
+# # Compute location from command line arguments.
+# if len(sys.argv) < 2:
+#     print('Usage: get_open_weather.py city_name')
+#     sys.exit()
 
-city = ' '.join(sys.argv[1:])
+# city = ' '.join(sys.argv[1:])
+
+city = input("Please enter city: ")
+
 logging.debug(city)
 
 location = get_coordinates(city)
