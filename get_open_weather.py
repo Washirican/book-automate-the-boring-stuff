@@ -60,7 +60,7 @@ main = weather_data['current']['weather'][0]['main']
 description = weather_data['current']['weather'][0]['description']
 
 header = f'{city_address}'
-report = f'Current conditions are {description} wit a temperature of {temp} F that feels like {feels_like} F.'
+report = f'Current conditions are {description} with a temperature of {temp} F that feels like {feels_like} F.'
 
 separator = 113
 # if len(report) > len(header):
