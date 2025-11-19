@@ -20,7 +20,7 @@ logging.debug(f"Open Weather Map API ID: {API_ID}")
 
 def get_coordinates(city):
     """Gets coordinates to a city."""
-    geolocator = Nominatim(user_agent="my_app")
+    geolocator = Nominatim(user_agent="my_weather_app")
     location = geolocator.geocode(city, timeout=5)
     if location:
         return location
