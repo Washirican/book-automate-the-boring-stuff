@@ -10,6 +10,8 @@ import requests
 from geopy.geocoders import Nominatim
 import os
 
+# TODO (2025-11-19): Fix so that it does not close immediately after running stand alone file.
+
 API_ID = os.getenv("OPEN_WEATHER_APPID")
 
 
